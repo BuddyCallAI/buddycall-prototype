@@ -428,7 +428,7 @@
           }
         ],
         "inputs": {
-          "model": "",
+          "model": "{{azureChatOpenAI_0.data.instance}}",
           "memory": "{{bufferMemory_0.data.instance}}",
           "chatPromptTemplate": "",
           "inputModeration": [
@@ -549,6 +549,14 @@
       "targetHandle": "conversationChain_0-input-inputModeration-Moderation",
       "type": "buttonedge",
       "id": "inputModerationSimple_0-inputModerationSimple_0-output-inputModerationSimple-Moderation-conversationChain_0-conversationChain_0-input-inputModeration-Moderation"
+    },
+    {
+      "source": "azureChatOpenAI_0",
+      "sourceHandle": "azureChatOpenAI_0-output-azureChatOpenAI-AzureChatOpenAI|ChatOpenAI|BaseChatOpenAI|BaseChatModel|BaseLanguageModel|Runnable",
+      "target": "conversationChain_0",
+      "targetHandle": "conversationChain_0-input-model-BaseChatModel",
+      "type": "buttonedge",
+      "id": "azureChatOpenAI_0-azureChatOpenAI_0-output-azureChatOpenAI-AzureChatOpenAI|ChatOpenAI|BaseChatOpenAI|BaseChatModel|BaseLanguageModel|Runnable-conversationChain_0-conversationChain_0-input-model-BaseChatModel"
     }
   ]
 }
