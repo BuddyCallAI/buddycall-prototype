@@ -428,7 +428,7 @@
           }
         ],
         "inputs": {
-          "model": "{{azureChatOpenAI_0.data.instance}}",
+          "model": "",
           "memory": "{{bufferMemory_0.data.instance}}",
           "chatPromptTemplate": "",
           "inputModeration": [
