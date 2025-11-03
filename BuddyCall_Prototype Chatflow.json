@@ -1,4 +1,10 @@
 {
+  "name": "BuddyCall Prototype Chatflow",
+  "description": "Azure OpenAI conversation chain with moderation and buffer memory.",
+  "type": "chatflow",
+  "chatflowId": "buddycall-prototype-chatflow",
+  "inSync": true,
+  "active": false,
   "nodes": [
     {
       "id": "inputModerationSimple_0",
@@ -549,6 +555,37 @@
       "targetHandle": "conversationChain_0-input-inputModeration-Moderation",
       "type": "buttonedge",
       "id": "inputModerationSimple_0-inputModerationSimple_0-output-inputModerationSimple-Moderation-conversationChain_0-conversationChain_0-input-inputModeration-Moderation"
+    },
+    {
+      "source": "azureChatOpenAI_0",
+      "sourceHandle": "azureChatOpenAI_0-output-azureChatOpenAI-AzureChatOpenAI|ChatOpenAI|BaseChatOpenAI|BaseChatModel|BaseLanguageModel|Runnable",
+      "target": "conversationChain_0",
+      "targetHandle": "conversationChain_0-input-model-BaseChatModel",
+      "type": "buttonedge",
+      "id": "azureChatOpenAI_0-azureChatOpenAI_0-output-azureChatOpenAI-AzureChatOpenAI|ChatOpenAI|BaseChatOpenAI|BaseChatModel|BaseLanguageModel|Runnable-conversationChain_0-conversationChain_0-input-model-BaseChatModel"
     }
-  ]
+  ],
+  "viewport": {
+    "x": 0,
+    "y": 0,
+    "zoom": 1
+  },
+  "chatbotConfig": {
+    "sessionId": "",
+    "history": true,
+    "inputHistory": false,
+    "maxHistoryLength": 6,
+    "memoryType": "buffer",
+    "userMessageColor": "#000000",
+    "aiMessageColor": "#EEF2FF"
+  },
+  "apiConfig": {
+    "method": "POST",
+    "path": "",
+    "timeout": 60000,
+    "headers": {},
+    "query": {},
+    "body": {},
+    "response": {}
+  }
 }
